@@ -15,7 +15,7 @@
 create table public.profiles (
   id    uuid primary key references auth.users (id) on delete cascade,
   email text not null unique
-);
+); 
 
 comment on table public.profiles is
   'Public mirror of auth.users; lets the app resolve a share recipient by email.';
